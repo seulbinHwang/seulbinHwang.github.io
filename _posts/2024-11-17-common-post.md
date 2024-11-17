@@ -1,9 +1,9 @@
 ---
 layout: post
 title: Common project
-subtitle: https://jkhsb-every-day-changes.tistory.com
+subtitle: Not Automated Driving, Not FSA
 tags: [blog post]
 comments: true
 
 ---
-- https://jkhsb-every-day-changes.tistory.com
+- [블로그 바로가기](https://jkhsb-every-day-changes.tistory.com)
