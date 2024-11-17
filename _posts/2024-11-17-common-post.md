@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Common project
+title: Common Post
 subtitle: Not Automated Driving, Not FSA
 tags: [blog post]
 comments: true
