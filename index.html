@@ -1,73 +1,276 @@
----
-layout: page
-use-site-title: true
----
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Seulbin Hwang | Autonomous Driving, Robotics &amp; World Models</title>
+  <meta name="description" content="Researcher developing generative world models, multi-agent simulation, and closed-loop learning for autonomous driving and robotics.">
+  <meta name="author" content="Seulbin Hwang">
+  <meta name="theme-color" content="#f7f8f5">
+  <link rel="canonical" href="https://seulbinhwang.github.io/">
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Seulbin Hwang | Autonomous Driving, Robotics &amp; World Models">
+  <meta property="og:description" content="Generative models and world models for autonomous driving and robotics.">
+  <meta property="og:url" content="https://seulbinhwang.github.io/">
+  <meta property="og:image" content="https://seulbinhwang.github.io/assets/portfolio/flow-erd-poster.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="assets/css/research-home.css?v=20260713-2">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    "mainEntity": {
+      "@type": "Person",
+      "name": "Seulbin Hwang",
+      "url": "https://seulbinhwang.github.io/",
+      "image": "https://seulbinhwang.github.io/assets/portfolio/seulbin-hwang.jpg",
+      "email": "mailto:jksg01019@gmail.com",
+      "jobTitle": "Researcher",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "NAVER LABS"
+      },
+      "knowsAbout": [
+        "Autonomous Driving",
+        "Robotics",
+        "World Models",
+        "Multi-Agent Simulation",
+        "Flow Matching",
+        "Closed-Loop Learning"
+      ],
+      "sameAs": [
+        "https://scholar.google.com/citations?user=f9U7QcYAAAAJ&hl=ko",
+        "https://github.com/seulbinHwang",
+        "https://dblp.org/pid/289/7163.html",
+        "https://seulbinhwang.github.io/flow-erd-project-page/"
+      ]
+    }
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-Autonomous Driving and Robots, Deep Learning
-
-
-<div class="posts-list">
-  {% for post in paginator.posts %}
-  <article class="post-preview">
-    <a href="{{ post.url | relative_url }}">
-	  <h2 class="post-title">{{ post.title }}</h2>
-
-	  {% if post.subtitle %}
-	  <h3 class="post-subtitle">
-	    {{ post.subtitle }}
-	  </h3>
-	  {% endif %}
-    </a>
-
-    <p class="post-meta">
-      Posted on {{ post.date | date: site.date_format }}
-    </p>
-
-    <div class="post-entry-container">
-      {% if post.image %}
-      <div class="post-image">
-        <a href="{{ post.url | relative_url }}">
-          <img src="{{ post.image | relative_url }}">
-        </a>
+  <header class="site-header">
+    <nav class="nav-shell" aria-label="Primary navigation">
+      <a class="site-name" href="#top" aria-label="Seulbin Hwang, home">Seulbin Hwang</a>
+      <div class="nav-links">
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#about">About</a>
       </div>
-      {% endif %}
-      <div class="post-entry">
-        {{ post.excerpt | strip_html | xml_escape | truncatewords: site.excerpt_length }}
-        {% assign excerpt_word_count = post.excerpt | number_of_words %}
-        {% if post.content != post.excerpt or excerpt_word_count > site.excerpt_length %}
-          <a href="{{ post.url | relative_url }}" class="post-read-more">[Read&nbsp;More]</a>
-        {% endif %}
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="intro section-shell" id="top" aria-labelledby="intro-title">
+      <div class="identity-row">
+        <img class="portrait" src="assets/portfolio/seulbin-hwang.jpg" width="168" height="224" alt="Portrait of Seulbin Hwang">
+        <div class="identity-copy">
+          <p class="eyebrow">Seulbin Hwang</p>
+          <h1 id="intro-title">Generative Models for<br>Autonomous Driving &amp; Robotics</h1>
+          <p class="intro-text">I develop learning-based systems that perceive, simulate, and reason about complex interactive environments. My current research focuses on generative multi-agent traffic simulation, flow matching, and closed-loop learning, toward world models for autonomous driving and robotics.</p>
+          <p class="affiliation">Researcher at NAVER LABS</p>
+        </div>
       </div>
+
+      <div class="action-row" aria-label="Profile links">
+        <a class="action-link primary" href="#research">Research</a>
+        <a class="action-link" href="#publications">Publications</a>
+        <a class="action-link" href="https://scholar.google.com/citations?user=f9U7QcYAAAAJ&amp;hl=ko" target="_blank" rel="noopener">Google Scholar <span aria-hidden="true">&#8599;</span></a>
+        <a class="action-link" href="https://github.com/seulbinHwang" target="_blank" rel="noopener">GitHub <span aria-hidden="true">&#8599;</span></a>
+        <a class="action-link" href="mailto:jksg01019@gmail.com">Email</a>
+      </div>
+    </section>
+
+    <section class="featured-band" id="research" aria-labelledby="featured-title">
+      <div class="section-shell">
+        <div class="section-heading compact-heading">
+          <p class="section-index">Featured research</p>
+          <h2 id="featured-title">One scene, many plausible worlds.</h2>
+        </div>
+
+        <figure class="featured-media" id="flow-video">
+          <video muted loop playsinline autoplay controls preload="metadata" poster="assets/portfolio/flow-erd-poster.jpg" aria-label="Flow-ERD multi-agent traffic simulation video">
+            <source src="assets/portfolio/flow-erd.mp4" type="video/mp4">
+          </video>
+          <figcaption>Flow-ERD rolls out diverse, closed-loop traffic futures from the same initial scene. Cyan denotes the autonomous vehicle under test.</figcaption>
+        </figure>
+
+        <div class="featured-details">
+          <div class="featured-summary">
+            <div class="badge-row">
+              <span class="result-badge">#1 WOSAC 2025 Test Benchmark</span>
+              <span class="paper-status">2026 preprint</span>
+            </div>
+            <h3>Flow-ERD</h3>
+            <p class="paper-subtitle">Agent-type Aware Flow Matching with Entropy-Regularized Distillation for Diverse Traffic Simulation</p>
+            <p>A generative multi-agent traffic simulator that jointly improves closed-loop realism and diversity through agent-type-aware flow matching and entropy-regularized distillation.</p>
+            <p class="role-line"><strong>Co-first author</strong> with Kiyoung Om</p>
+            <div class="paper-links">
+              <a href="https://arxiv.org/abs/2607.06957" target="_blank" rel="noopener">Paper <span aria-hidden="true">&#8599;</span></a>
+              <a href="https://seulbinhwang.github.io/flow-erd-project-page/" target="_blank" rel="noopener">Project page <span aria-hidden="true">&#8599;</span></a>
+              <a href="#flow-video">Video</a>
+              <span aria-disabled="true">Code coming soon</span>
+            </div>
+          </div>
+          <dl class="featured-metrics">
+            <div>
+              <dt>RMM</dt>
+              <dd>0.7878</dd>
+            </div>
+            <div>
+              <dt>Benchmark</dt>
+              <dd>#1</dd>
+            </div>
+            <div>
+              <dt>Core idea</dt>
+              <dd>Realism + diversity</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <section class="directions section-shell" aria-labelledby="directions-title">
+      <div class="section-heading">
+        <p class="section-index">Research directions</p>
+        <h2 id="directions-title">Building systems that understand and simulate interactive worlds.</h2>
+      </div>
+      <div class="direction-grid">
+        <article>
+          <span class="direction-number">01</span>
+          <h3>Generative World Modeling &amp; Simulation</h3>
+          <p>Learning generative models of interactive environments for realistic, diverse, and controllable closed-loop simulation.</p>
+          <a href="#featured-title">Flow-ERD</a>
+        </article>
+        <article>
+          <span class="direction-number">02</span>
+          <h3>Open-World 3D Perception</h3>
+          <p>Recognizing previously unseen objects while preserving geometric consistency and efficient inference for autonomous systems.</p>
+          <a href="#ovbevseg">OVBEVSeg</a>
+        </article>
+        <article>
+          <span class="direction-number">03</span>
+          <h3>Safe Decision-Making &amp; Planning</h3>
+          <p>Developing policies that account for interaction, uncertainty, and risk in autonomous navigation and driving.</p>
+          <a href="#safe-decision-making">Selected work</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="publications-band" id="publications" aria-labelledby="publications-title">
+      <div class="section-shell">
+        <div class="section-heading heading-with-link">
+          <div>
+            <p class="section-index">Selected publications</p>
+            <h2 id="publications-title">Research across simulation, perception, and planning.</h2>
+          </div>
+          <a class="text-link" href="https://scholar.google.com/citations?user=f9U7QcYAAAAJ&amp;hl=ko" target="_blank" rel="noopener">Complete list on Scholar <span aria-hidden="true">&#8599;</span></a>
+        </div>
+
+        <div class="publication-list">
+          <article class="publication-card flagship">
+            <div class="publication-visual video-still">
+              <img src="assets/portfolio/flow-erd-poster.jpg" width="1280" height="720" alt="Flow-ERD traffic simulation showing two plausible worlds" loading="lazy">
+            </div>
+            <div class="publication-copy">
+              <p class="publication-meta">2026 preprint · Co-first author</p>
+              <h3>Flow-ERD: Agent-type Aware Flow Matching with Entropy-Regularized Distillation for Diverse Traffic Simulation</h3>
+              <p>Continuous, type-compatible traffic generation with closed-loop fine-tuning that preserves multimodality.</p>
+              <p class="publication-result"><strong>Result:</strong> #1 on the WOSAC 2025 test benchmark, RMM 0.7878.</p>
+              <div class="paper-links">
+                <a href="https://arxiv.org/abs/2607.06957" target="_blank" rel="noopener">Paper <span aria-hidden="true">&#8599;</span></a>
+                <a href="https://seulbinhwang.github.io/flow-erd-project-page/" target="_blank" rel="noopener">Project <span aria-hidden="true">&#8599;</span></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="publication-card" id="ovbevseg">
+            <div class="publication-visual research-figure">
+              <img src="assets/portfolio/ovbevseg-figure.png" width="937" height="878" alt="Comparison of conventional and 3D-aware Gaussian splatting for open-vocabulary BEV segmentation" loading="lazy">
+            </div>
+            <div class="publication-copy">
+              <p class="publication-meta">2026 preprint · Co-author</p>
+              <h3>Open-Vocabulary BEV Segmentation with 3D-Aware Geometric Constraints</h3>
+              <p>Open-world bird's-eye-view perception that recognizes unseen categories while preserving 3D geometry and real-time efficiency.</p>
+              <p class="publication-result"><strong>Result:</strong> +15.3 mIoU on unseen categories, 2.5x faster inference, and 0.22x memory.</p>
+              <div class="paper-links">
+                <a href="https://arxiv.org/abs/2606.24353" target="_blank" rel="noopener">Paper <span aria-hidden="true">&#8599;</span></a>
+                <a href="https://hchoi256.github.io/projects/ovbevseg/" target="_blank" rel="noopener">Project <span aria-hidden="true">&#8599;</span></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="publication-card" id="safe-decision-making">
+            <div class="publication-visual research-figure">
+              <img src="assets/portfolio/cut-in-figure.png" width="378" height="411" alt="Soft Actor-Critic lane-change planner controlling acceleration and steering in a traffic simulator" loading="lazy">
+            </div>
+            <div class="publication-copy">
+              <p class="publication-meta">IEEE T-ITS · 2022 · First author</p>
+              <h3>Autonomous Vehicle Cut-In Algorithm for Lane-Merging Scenarios via Policy-Based Reinforcement Learning Nested Within Finite-State Machine</h3>
+              <p>A structured driving policy that combines interpretable state transitions with learned decision-making for interactive lane merging.</p>
+              <p class="publication-result"><strong>Venue:</strong> IEEE Transactions on Intelligent Transportation Systems.</p>
+              <div class="paper-links">
+                <a href="https://doi.org/10.1109/TITS.2022.3153848" target="_blank" rel="noopener">Paper <span aria-hidden="true">&#8599;</span></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="publication-card">
+            <div class="publication-visual research-figure">
+              <img src="assets/portfolio/risk-sac-figure.jpg" width="550" height="450" alt="Mobile robot navigating a real indoor hallway during risk-sensitive navigation experiments" loading="lazy">
+            </div>
+            <div class="publication-copy">
+              <p class="publication-meta">ICRA · 2021 · Co-author</p>
+              <h3>Risk-Conditioned Distributional Soft Actor-Critic for Risk-Sensitive Navigation</h3>
+              <p>A distributional reinforcement-learning policy that adapts its risk preference at runtime without retraining.</p>
+              <p class="publication-result"><strong>Evaluation:</strong> Simulated and real-world mobile-robot navigation.</p>
+              <div class="paper-links">
+                <a href="https://arxiv.org/abs/2104.03111" target="_blank" rel="noopener">Paper <span aria-hidden="true">&#8599;</span></a>
+                <a href="https://doi.org/10.1109/ICRA48506.2021.9560962" target="_blank" rel="noopener">DOI <span aria-hidden="true">&#8599;</span></a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="updates-band" aria-labelledby="updates-title">
+      <div class="section-shell updates-grid">
+        <div>
+          <div class="section-heading compact-heading">
+            <p class="section-index">News</p>
+            <h2 id="updates-title">Recent updates</h2>
+          </div>
+          <ol class="news-list">
+            <li><time datetime="2026-07">Jul 2026</time><span>Flow-ERD preprint and project page released.</span></li>
+            <li><time datetime="2026-06">Jun 2026</time><span>OVBEVSeg preprint released.</span></li>
+            <li><time datetime="2025">2025</time><span>Flow-ERD ranked first on the WOSAC 2025 test benchmark.</span></li>
+          </ol>
+        </div>
+        <aside class="contact-callout" id="about">
+          <p class="section-index">About &amp; contact</p>
+          <h2>Researching interactive autonomous systems.</h2>
+          <p>I work on generative simulation, open-world perception, and risk-aware decision-making for autonomous driving and robotics.</p>
+          <p>I welcome technical discussions, research collaborations, and invited talks related to generative simulation, world models, and autonomous systems.</p>
+          <div class="paper-links">
+            <a href="mailto:jksg01019@gmail.com">Email</a>
+            <a href="https://github.com/seulbinHwang" target="_blank" rel="noopener">GitHub <span aria-hidden="true">&#8599;</span></a>
+            <a href="https://dblp.org/pid/289/7163.html" target="_blank" rel="noopener">DBLP <span aria-hidden="true">&#8599;</span></a>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="section-shell">
+      <p>&copy; 2026 Seulbin Hwang</p>
+      <a href="#top">Back to top</a>
     </div>
+  </footer>
 
-    {% if post.tags.size > 0 %}
-    <div class="blog-tags">
-      Tags:
-      {% if site.link-tags %}
-      {% for tag in post.tags %}
-      <a href="{{ '/tags' | relative_url }}#{{- tag -}}">{{- tag -}}</a>
-      {% endfor %}
-      {% else %}
-        {{ post.tags | join: ", " }}
-      {% endif %}
-    </div>
-    {% endif %}
-
-   </article>
-  {% endfor %}
-</div>
-
-{% if paginator.total_pages > 1 %}
-<ul class="pager main-pager">
-  {% if paginator.previous_page %}
-  <li class="previous">
-    <a href="{{ paginator.previous_page_path | relative_url }}">&larr; Newer Posts</a>
-  </li>
-  {% endif %}
-  {% if paginator.next_page %}
-  <li class="next">
-    <a href="{{ paginator.next_page_path | relative_url }}">Older Posts &rarr;</a>
-  </li>
-  {% endif %}
-</ul>
-{% endif %}
+  <script src="assets/js/research-home.js?v=20260713" defer></script>
+</body>
+</html>
