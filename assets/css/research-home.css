@@ -153,15 +153,15 @@ h3 {
 
 .identity-row {
   display: grid;
-  grid-template-columns: 150px minmax(0, 1fr);
+  grid-template-columns: 168px minmax(0, 1fr);
   align-items: center;
   gap: 40px;
   max-width: 980px;
 }
 
 .portrait {
-  width: 150px;
-  height: 200px;
+  width: 168px;
+  height: 224px;
   object-fit: cover;
   border: 1px solid var(--line);
   border-radius: 4px;
@@ -804,8 +804,8 @@ h3 {
   }
 
   .portrait {
-    width: 98px;
-    height: 130px;
+    width: 110px;
+    height: 147px;
     margin-bottom: 22px;
   }
 
