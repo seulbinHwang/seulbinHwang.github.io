@@ -201,10 +201,16 @@ h3 {
 }
 
 .affiliation {
-  margin-bottom: 0;
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 auto 24px;
+  padding: 5px 14px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
   color: var(--muted);
   font-size: 0.95rem;
   font-weight: 600;
+  text-align: center;
 }
 
 .action-row,
