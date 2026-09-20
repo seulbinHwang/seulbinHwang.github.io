@@ -441,6 +441,14 @@ h3 {
   padding-top: 16px;
 }
 
+.directions .section-heading {
+  max-width: none;
+}
+
+.directions .section-index {
+  font-size: 1.17rem;
+}
+
 .directions-summary {
   margin: 20px 0 0;
   color: var(--muted);
