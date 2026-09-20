@@ -148,6 +148,7 @@ h3 {
 }
 
 .intro {
+  --action-font-size: 0.9rem;
   padding-block: 72px 56px;
 }
 
@@ -225,6 +226,26 @@ h3 {
   margin-top: 34px;
 }
 
+.profile-actions {
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding: 4px;
+}
+
+.profile-actions .action-link {
+  flex: 0 0 auto;
+  white-space: nowrap;
+}
+
+.action-row.section-actions {
+  margin-top: 14px;
+}
+
+.section-actions .action-link {
+  padding: 12px 20px;
+  font-size: calc(var(--action-font-size) * 1.3);
+}
+
 .action-link {
   min-height: 42px;
   display: inline-flex;
@@ -236,7 +257,7 @@ h3 {
   border-radius: 4px;
   background: var(--surface);
   color: var(--ink);
-  font-size: 0.9rem;
+  font-size: var(--action-font-size, 0.9rem);
   font-weight: 650;
   line-height: 1.2;
   text-decoration: none;
@@ -805,6 +826,7 @@ h3 {
   }
 
   .intro {
+    --action-font-size: 0.84rem;
     padding-block: 48px 42px;
   }
 
@@ -837,7 +859,7 @@ h3 {
   .action-link {
     min-height: 40px;
     padding-inline: 12px;
-    font-size: 0.84rem;
+    font-size: var(--action-font-size, 0.84rem);
   }
 
   .featured-band,
