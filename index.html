@@ -14,7 +14,7 @@
   <meta property="og:url" content="https://seulbinhwang.github.io/">
   <meta property="og:image" content="https://seulbinhwang.github.io/assets/portfolio/flow-erd-poster.jpg">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="stylesheet" href="assets/css/research-home.css?v=20260920-5">
+  <link rel="stylesheet" href="assets/css/research-home.css?v=20260920-6">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -101,26 +101,25 @@
     <section class="directions section-shell" aria-labelledby="directions-title">
       <div class="section-heading">
         <p class="section-index">Research directions</p>
-        <h2 id="directions-title">Building systems that understand and simulate interactive worlds.</h2>
+        <h2 id="directions-title">Realistic traffic worlds for planner training and evaluation.</h2>
+        <p class="directions-summary">Building closed-loop traffic world models that capture realistic dynamic-agent behavior and run in real time over long horizons, enabling planner training and evaluation for autonomous vehicles and mobile robots.</p>
       </div>
       <div class="direction-grid">
         <article>
           <span class="direction-number">01</span>
-          <h3>Generative World Modeling &amp; Simulation</h3>
+          <h3>Vectorized Traffic World Models (Flow-ERD)</h3>
           <p>Learning generative models of interactive environments for realistic, diverse, and controllable closed-loop simulation.</p>
           <a href="https://seulbinhwang.github.io/flow-erd-project-page/">Flow-ERD</a>
         </article>
         <article>
           <span class="direction-number">02</span>
-          <h3>Open-World 3D Perception</h3>
-          <p>Recognizing previously unseen objects while preserving geometric consistency and efficient inference for autonomous systems.</p>
-          <a href="/publications/#ovbevseg">OVBEVSeg</a>
+          <h3>Multi-View Camera Traffic World Models</h3>
+          <p>Extending Flow-ERD with multi-view image rendering, using approaches such as <a href="https://research.nvidia.com/labs/sil/projects/omnidreams-blog/" target="_blank" rel="noopener">NVIDIA OmniDreams</a> to bridge vectorized traffic simulation and camera-based world models.</p>
         </article>
         <article>
           <span class="direction-number">03</span>
-          <h3>Safe Decision-Making &amp; Planning</h3>
-          <p>Developing policies that account for interaction, uncertainty, and risk in autonomous navigation and driving.</p>
-          <a href="/publications/#safe-decision-making">Selected work</a>
+          <h3>Traffic World Models Across Robot Platforms</h3>
+          <p>Developing traffic world models that support multiple platforms, from autonomous vehicles to outdoor mobile robots, for closed-loop planner training and evaluation.</p>
         </article>
       </div>
     </section>
