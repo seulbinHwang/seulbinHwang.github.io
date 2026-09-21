@@ -665,6 +665,18 @@ h3 {
   font-weight: 700;
 }
 
+.news-list .waymo-brand {
+  display: inline-flex;
+  align-items: center;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.waymo-logo {
+  width: 2em;
+  height: auto;
+}
+
 .background-column {
   display: grid;
   gap: 30px;
