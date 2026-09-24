@@ -678,6 +678,16 @@ h3 {
   height: auto;
 }
 
+.intro-award {
+  white-space: nowrap;
+}
+
+.intro-award .waymo-logo {
+  display: inline-block;
+  margin-inline: -0.3em -0.35em;
+  vertical-align: middle;
+}
+
 .background-column {
   display: grid;
   gap: 30px;
