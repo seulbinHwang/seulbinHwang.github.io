@@ -198,7 +198,8 @@ h3 {
   max-width: 790px;
   margin-bottom: 14px;
   color: #36413e;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
+  line-height: 1.6;
 }
 
 .affiliation {
@@ -889,7 +890,7 @@ h3 {
   }
 
   .intro-text {
-    font-size: 1rem;
+    font-size: 1.0625rem;
   }
 
   .action-row {
