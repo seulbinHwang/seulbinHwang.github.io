@@ -530,6 +530,12 @@ h3 {
   background: var(--surface);
 }
 
+/* first-author papers and own projects */
+.publication-card.lead-author {
+  border: 2px solid var(--teal);
+  box-shadow: 0 0 0 4px var(--teal-soft);
+}
+
 .publication-visual {
   position: relative;
   min-height: 250px;
